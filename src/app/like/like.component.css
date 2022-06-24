@@ -1,0 +1,11 @@
+.likeBtnActive {
+    color: deeppink;
+}
+
+.likeBtnInactive {
+    color: #ccc;
+}
+
+.likeBtn {
+    cursor: pointer;
+}

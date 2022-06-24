@@ -1,0 +1,7 @@
+<h1>Favourite</h1>
+<button class="btn" [ngClass]="{
+        'btn-success':isActive,
+        'btn-danger':!isActive
+    }" (click)="toggleIsActive()">
+    Hello
+</button>
