@@ -37,6 +37,9 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
 import { HomeComponent } from './home/home.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { ArchivesComponent } from './archives/archives.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     GithubProfileComponent,
     NotFoundComponent,
+    NavbarComponent,
+    ArchivesComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +76,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: "", component: HomeComponent },
+      { path: "posts", component: PostsComponent },
+      { path: "followers/:id/:username", component: GithubProfileComponent },
+      { path: "followers", component: GithubFollowersComponent },
+      { path: "archive/:year/:month", component: ArchivesComponent },
+      { path: "**", component: NotFoundComponent },
+    ])
   ],
   providers: [
     CoursesService,
