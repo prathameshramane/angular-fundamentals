@@ -1,0 +1,21 @@
+.follower-container {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.follower-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.follower-avatar {
+    margin-right: 1rem;
+}
+
+.avatar-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
